@@ -103,6 +103,8 @@ checkout.
 An activation can be removed from one PC and used again on another PC by the
 same license holder.
 
+[Purchase lifetime access on Ko-fi](https://ko-fi.com/s/56eb6d985f).
+
 ## Legal Notices
 
 See [LICENSE.md](LICENSE.md), [EULA.md](EULA.md), and
