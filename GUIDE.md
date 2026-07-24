@@ -153,7 +153,7 @@ controllers supported by SimHub.
   connected.
 - Make sure `DashDeck.dll` is installed in the SimHub root folder, not in
   `SimHub\Plugins`.
-- Install the .NET 8 Desktop Runtime if DashDeck reports that the capture helper
+- Install the .NET 10 Runtime (x64) if DashDeck reports that the capture helper
   cannot start.
 - For phone or tablet output, allow SimHub through the Windows firewall when
   prompted and keep both devices on the same network.

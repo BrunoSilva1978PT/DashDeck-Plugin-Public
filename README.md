@@ -28,7 +28,7 @@ All rights are reserved by Bruno Silva.
 - Windows 10 or Windows 11.
 - SimHub with the plugin system enabled.
 - .NET Framework 4.8 through SimHub.
-- The Microsoft .NET 8 Runtime (x64) for the high-performance capture helper.
+- The Microsoft .NET 10 Runtime (x64) for the high-performance capture helper.
 - At least one output:
   - a VoCore display managed by SimHub;
   - a secondary monitor;
