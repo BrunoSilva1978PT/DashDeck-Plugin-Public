@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.3.0 - 2026-07-24
+
+- Migrated the high-performance Desktop Duplication capture helper from .NET 8
+  to .NET 10.
+- Added reliable detection of the required Microsoft .NET 10 Runtime (x64).
+- Added a built-in Install action that downloads and launches Microsoft's
+  official runtime installer when it is missing.
+- DashDeck now verifies that the runtime installation succeeded and restarts
+  SimHub automatically so capture can start.
+- Improved the missing-runtime prompt and corrected capture performance logs
+  to identify frames as received from the external helper.
+
 ## 1.2.0 - 2026-07-24
 
 - Added one, two, or three selectable capture areas to Screen 1, Screen 2, and

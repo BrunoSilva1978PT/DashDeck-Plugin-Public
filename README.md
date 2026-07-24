@@ -81,6 +81,10 @@ it manually to the SimHub root folder, normally:
 
 Do not install the DLL in `SimHub\Plugins`.
 
+If the required .NET 10 Runtime (x64) is missing, DashDeck offers to download
+and run Microsoft's official installer. After a successful installation,
+DashDeck restarts SimHub automatically so capture can start.
+
 ## Basic Setup
 
 1. Open the **Screens** tab and enable the Invisible dash or one of the three
