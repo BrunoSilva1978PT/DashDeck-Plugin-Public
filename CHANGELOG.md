@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.2.0 - 2026-07-24
+
+- Added one, two, or three selectable capture areas to Screen 1, Screen 2, and
+  Screen 3. Area count is global, while each area's coordinates, tilt, and
+  source monitor remain per car.
+- Added Next and Previous capture area controls and Control Mapper roles for
+  each Screen, with wrap-around switching in both directions.
+- Allowed capture areas to be added, removed, and selected without a car
+  loaded; kept their coordinates visible; added removal confirmation; and made
+  unavailable geometry controls visually distinct.
+- Fixed coordinate and tilt edits so they immediately update the selected
+  capture area without making it disappear from the UI.
+- Made idle-theme rendering and previews use the target's real pixel
+  resolution, independently of Windows display scaling.
+- Expanded the CAS overlay with appearance presets, independently resizable
+  elements, configurable name-plate opacity, three spotter styles, custom
+  colours, optional details, and live scenario previews for supported VoCore
+  layouts.
+- Improved CAS layouts for landscape, square, and round displays, including
+  safer name placement, better scale-label spacing, a dedicated circular
+  layout, and calibrated round rear and header groups.
+- Updated the built-in guide and public documentation for the current capture,
+  multi-area, idle-theme, vehicle-resolution, and CAS behaviour.
+
 ## 1.1.0 - 2026-07-23
 
 - Made the capture-area editor toolbar draggable and able to move itself away
