@@ -42,20 +42,24 @@ A VoCore display is optional.
 - An Invisible dash that restores the part of the simulator hidden behind a
   physical DDU.
 - Up to three additional screens for mirrors, dashboards, and instruments.
+- One, two, or three selectable capture areas per Screen, with independent
+  per-car geometry and Next/Previous Control Mapper actions.
 - Independent VoCore, monitor, phone/tablet, or OBS output for each screen.
-- A visual area editor with aspect-ratio locking and support for tilted
-  in-game displays.
+- A visual area editor with aspect-ratio locking, tilted-display support, and a
+  draggable toolbar that moves away from the area being edited.
 - Per-car capture areas, including model-aware profiles for Le Mans Ultimate
-  and rFactor 2.
+  and rFactor 2 with vehicle-list caching and retry handling.
 - Automatic rectangular and round VoCore handling.
 - Fit, crop-fill, and stretch scaling with configurable image quality and frame
   limits.
-- An optional CAS rear-proximity overlay with side alerts, distance, and
-  time-gap information.
+- A configurable CAS rear-proximity overlay with resizable chevrons, names,
+  scales and spotter alerts; multiple spotter styles; custom colours; presets;
+  and live scenario previews for landscape, square, and round VoCore layouts.
 - A touch-controlled web browser and dedicated YouTube/Twitch video player on
   rectangular VoCore displays.
 - A virtual VoCore touchpad for controlling the Windows mouse from the cockpit.
-- Custom idle screens made from images, animated GIFs, or short videos.
+- Custom idle screens made from images, animated GIFs, or short videos, with
+  target-resolution previews and DPI-independent output scaling.
 - SimHub Control Mapper actions for the most important screen and touchpad
   controls.
 - Built-in update checking and installation.
@@ -82,14 +86,18 @@ Do not install the DLL in `SimHub\Plugins`.
 1. Open the **Screens** tab and enable the Invisible dash or one of the three
    mirror screens.
 2. Choose the monitor that contains the area to capture.
-3. Select **Edit area on screen** and place the rectangle over the hidden dash,
+3. For a mirror Screen, choose whether it needs one, two, or three selectable
+   areas.
+4. Select **Edit area on screen** and place the rectangle over the hidden dash,
    mirror, or instrument.
-4. Choose a VoCore, secondary monitor, or phone/tablet output.
-5. Load a car before editing a mirror screen so DashDeck can save its capture
+5. Choose a VoCore, secondary monitor, or phone/tablet output.
+6. Load a car before editing a mirror screen so DashDeck can save its capture
    area to the correct car profile.
 
 The Invisible dash is global. Mirror capture geometry is saved per car, while
-output, scaling, quality, CAS, and other display options remain global.
+the number of areas, active area, output, scaling, quality, CAS, and other
+display options remain global. Bind the Screen's Next and Previous capture area
+actions in SimHub Control Mapper to switch areas while driving.
 
 See [GUIDE.md](GUIDE.md) for a more detailed introduction. The complete guide
 is also available inside the plugin.

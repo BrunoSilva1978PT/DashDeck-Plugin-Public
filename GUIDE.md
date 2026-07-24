@@ -21,18 +21,35 @@ Use Screen 1, Screen 2, or Screen 3 for an in-game mirror, dashboard, camera
 view, or instrument. The capture area and source monitor are stored per car,
 because the position of an in-game display can change between cars.
 
+Each Screen can have one, two, or three capture areas. The number of areas is
+global for that Screen, while each area's coordinates, tilt, and source monitor
+are saved for the current car. Use the Next and Previous capture area controls
+to switch between them while driving; the selection wraps from the last area
+back to the first and in the opposite direction.
+
 For Le Mans Ultimate and rFactor 2, DashDeck resolves the real vehicle model so
 different teams and liveries of the same model can share one capture profile.
+The resolver retries when the game's vehicle API is not ready yet and can reuse
+its cached vehicle list instead of permanently falling back to a team name.
 
 ## Creating a Capture
 
 1. Enable the required screen.
 2. Select its source monitor.
-3. Choose **Edit area on screen**.
-4. Drag and resize the selection over the required part of the simulator.
-5. If the in-game display is angled, use the tilt handle to align the
+3. For Screen 1, 2, or 3, add a second or third area only if it is needed and
+   select the area to configure.
+4. Choose **Edit area on screen**.
+5. Drag and resize the selection over the required part of the simulator.
+6. If the in-game display is angled, use the tilt handle to align the
    selection.
-6. Select the output device and choose the scaling mode.
+7. Select the output device and choose the scaling mode.
+
+The number of areas can be changed without a car loaded. Area coordinates
+remain visible in the UI, but per-car geometry can only be edited after SimHub
+has identified the current car. Removing an area asks for confirmation.
+
+The area editor toolbar can be dragged to a convenient position and
+automatically moves away when it would cover the area being edited.
 
 Best quality is obtained when the capture area has the same aspect ratio and a
 similar resolution to the output device.
@@ -70,6 +87,22 @@ It can show a rear chevron, side alerts, distance, time gap, session
 information, and driver names. Enable it per mirror screen and configure its
 shared appearance on the **CAS Overlay** tab.
 
+The rear chevrons, distance label, driver names, session/lap text, scale text,
+and spotter alerts can be resized independently. The spotter can use filled
+arrows, outline arrows, or side chevrons. Safe, warning, critical, spotter,
+primary text, secondary text, scale, and scale-label colours can all be changed,
+and presets provide useful starting points.
+
+The preview offers representative scenarios and the supported landscape,
+square, and round VoCore resolutions. Round output uses a dedicated circular
+safe layout. Portrait VoCore models remain available for idle-theme previews,
+but are intentionally omitted from the CAS preview because the two side scales
+and centre alert need horizontal space.
+
+CAS is a driving aid and is only shown while the game is actively running with
+a valid car. It is hidden in menus, while paused, and over idle clocks or
+themes.
+
 ## Web Browser and Video
 
 A rectangular VoCore can display a touch-controlled web browser with favorites,
@@ -98,12 +131,17 @@ DashDeck includes a clock and supports custom themes containing:
 - a country flag.
 
 Create themes on the **Idle themes** tab and select one for each mirror screen.
+The preview can emulate the supported VoCore models and orientations, including
+square and round displays. Themes render from the target's real pixel size, so
+Windows display scaling on any desktop monitor does not make their contents
+larger or smaller on the output.
 
 ## Control Mapper
 
 DashDeck registers SimHub Control Mapper actions for editing capture areas,
-enabling or disabling individual screens, switching between capture and web
-sources, and toggling the virtual touchpad.
+enabling or disabling individual screens, moving each Screen to its Next or
+Previous configured capture area, switching between capture and web sources,
+and toggling the virtual touchpad.
 
 These actions can be assigned to steering-wheel buttons, button boxes, or other
 controllers supported by SimHub.
