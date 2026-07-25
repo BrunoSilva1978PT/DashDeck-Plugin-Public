@@ -44,9 +44,14 @@ A VoCore display is optional.
 - Up to three additional screens for mirrors, dashboards, and instruments.
 - One, two, or three selectable capture areas per Screen, with independent
   per-car geometry and Next/Previous Control Mapper actions.
-- Independent VoCore, monitor, phone/tablet, or OBS output for each screen.
-- A visual area editor with aspect-ratio locking, tilted-display support, and a
-  draggable toolbar that moves away from the area being edited.
+- Independent VoCore, monitor, or Phone / Tablet / OBS output for each screen.
+- Native, HD, and Full HD browser-stream resolutions, with GPU high-quality or
+  sharpened resize before JPEG encoding.
+- Phone and tablet keep-awake support, using the official Screen Wake Lock API
+  when available and a one-tap silent-video fallback on HTTP LAN connections.
+- A native-resolution visual area editor with aspect-ratio locking,
+  tilted-display support, a draggable toolbar that moves away from the area
+  being edited, and an integrated Screen/area selector.
 - Per-car capture areas, including model-aware profiles for Le Mans Ultimate
   and rFactor 2 with vehicle-list caching and retry handling.
 - Automatic rectangular and round VoCore handling.
@@ -94,7 +99,7 @@ DashDeck restarts SimHub automatically so capture can start.
    areas.
 4. Select **Edit area on screen** and place the rectangle over the hidden dash,
    mirror, or instrument.
-5. Choose a VoCore, secondary monitor, or phone/tablet output.
+5. Choose a VoCore, secondary monitor, or Phone / Tablet / OBS output.
 6. Load a car before editing a mirror screen so DashDeck can save its capture
    area to the correct car profile.
 

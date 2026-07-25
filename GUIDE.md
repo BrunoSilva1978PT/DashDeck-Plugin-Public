@@ -51,6 +51,12 @@ has identified the current car. Removing an area asks for confirmation.
 The area editor toolbar can be dragged to a convenient position and
 automatically moves away when it would cover the area being edited.
 
+The global Control Mapper action opens the editor on the Invisible dash. Use
+the Screen/area selector inside the editor to move to another configured area.
+Areas on the same source monitor reuse the frozen image; selecting an area on
+another monitor captures only that monitor. Opening the editor directly from a
+Screen starts on that Screen's active area.
+
 Best quality is obtained when the capture area has the same aspect ratio and a
 similar resolution to the output device.
 
@@ -77,6 +83,18 @@ would create a recursive image.
 DashDeck provides a browser URL for each remote output. Use the local URL in an
 OBS browser source, or enable network viewing and scan the QR code to open the
 output on a phone or tablet.
+
+Choose **Native** to stream the capture at its original pixel size with the
+lowest CPU and network use. **HD** and **Full HD** resize the capture on the
+helper GPU before JPEG encoding, which avoids asking a high-DPI phone or OBS to
+magnify a small compressed frame. When HD or Full HD is selected, choose
+**High quality** for a natural image or **Sharp** for an additional sharpening
+pass. The selected long edge preserves the capture area's aspect ratio.
+
+On a phone or tablet, tap the capture once when the keep-awake message appears.
+DashDeck uses the browser's Screen Wake Lock API when it is available and a
+silent-video compatibility fallback on normal HTTP LAN connections. The page
+tries to restore the keep-awake state when it returns from the background.
 
 Remote display access is view-only and uses a generated access token.
 

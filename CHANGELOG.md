@@ -1,5 +1,32 @@
 # Changelog
 
+## 1.4.0 - 2026-07-25
+
+- Renamed the browser output to Phone / Tablet / OBS and added Native, HD, and
+  Full HD stream resolutions.
+- Added real GPU resize quality controls for HD and Full HD streams, applying
+  high-quality or sharpened reconstruction before JPEG encoding.
+- Clarified that the global JPEG stream quality applies to both VoCore and
+  Phone / Tablet / OBS outputs.
+- Made area changes deterministic on static desktops by forcing a current
+  helper frame, rebuilding only the affected monitor duplication when needed,
+  and using a bounded helper-restart fallback.
+- Unified idle/live transitions across VoCore, monitor, and browser outputs so
+  each keeps a current live frame at 1 FPS and resumes without stale idle or
+  previous-area content.
+- Added transition and control-refresh diagnostics for game state, output
+  state, capture dimensions, and first-frame latency.
+- Kept source-monitor identity stable across Windows display renumbering and
+  Surround/Eyefinity topology changes, with the UI, runtime, and helper now
+  resolving the same current monitor from saved bounds and hardware identity.
+- Made the capture-area selector deterministic while car profiles are rebuilt
+  and added monitor-topology, resolved-source, and selected-area diagnostics.
+- Kept phone and tablet screens awake while displaying a remote capture: the
+  page uses the official Screen Wake Lock API when available and activates a
+  silent-video fallback after the first tap on HTTP LAN connections.
+- Kept the Windows cursor at a consistent apparent size on phone, tablet, and
+  OBS outputs when switching between Native, HD, and Full HD stream resolutions.
+
 ## 1.3.0 - 2026-07-24
 
 - Migrated the high-performance Desktop Duplication capture helper from .NET 8
