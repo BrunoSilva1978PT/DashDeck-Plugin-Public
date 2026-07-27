@@ -1,5 +1,38 @@
 # Changelog
 
+## 1.5.0 - 2026-07-27
+
+- Added ready-made controller integrations for Elgato Stream Deck and Stream
+  Deck +, Stream Dock, and Ulanzi Studio through the shared SimHub Control
+  Bridge.
+- Added controller actions for screen power, area editing, exact area
+  selection, previous/next or knob-driven area cycling, Capture/Web switching,
+  and touchpad visibility and power.
+- Kept controller titles, icons, selected screens, capture areas, and live
+  button states synchronized with the real DashDeck state.
+- Added controller component installation and update management to the
+  Controllers tab, including installed/available versions and safe application
+  restart handling.
+- Removed Logitech / Loupedeck from the DashDeck plugin because its action
+  model cannot configure per-action icons consistently with the other
+  supported controller applications.
+- Prevented a current or previously used VoCore from briefly showing a capture
+  frame while a Screen or Invisible dash toggle is being reconciled.
+- Added a non-modal client-messages window with ordered messages, unread
+  navigation, and persistent read history.
+- Expanded the public and built-in guides with controller installation,
+  actions, knob support, live-state behavior, and troubleshooting.
+
+## 1.4.1 - 2026-07-26
+
+- Fixed Stream Dock integration updates leaving the controller application closed. DashDeck now
+  resolves the installed executable when process inspection is unavailable, restores the official
+  working directory when launching it, and verifies that the application restarted successfully.
+- Changed controller integration checks to ignore residual plugin and configuration files when the
+  corresponding Stream Deck, Stream Dock, Ulanzi, or Logitech / Loupedeck software is not installed.
+- Revalidate controller applications immediately before installation so software removed after an
+  update check cannot trigger downloads, installers, or Windows file-association prompts.
+
 ## 1.4.0 - 2026-07-25
 
 - Renamed the browser output to Phone / Tablet / OBS and added Native, HD, and

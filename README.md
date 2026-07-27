@@ -67,6 +67,8 @@ A VoCore display is optional.
   target-resolution previews and DPI-independent output scaling.
 - SimHub Control Mapper actions for the most important screen and touchpad
   controls.
+- Optional Stream Deck, Stream Deck +, Stream Dock and Ulanzi control through
+  the shared SimHub Control Bridge.
 - Built-in update checking and installation.
 
 ## Installation

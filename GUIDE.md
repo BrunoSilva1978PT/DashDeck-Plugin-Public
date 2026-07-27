@@ -164,6 +164,45 @@ and toggling the virtual touchpad.
 These actions can be assigned to steering-wheel buttons, button boxes, or other
 controllers supported by SimHub.
 
+## Controller Integrations
+
+The **Controllers** tab can install the shared DashDeck Control Bridge and the
+ready-made integration for controller software already installed on the PC:
+
+- Elgato Stream Deck and Stream Deck +;
+- Stream Dock (experimental);
+- Ulanzi Studio (experimental).
+
+Select **Check now**, then **Install / Update**. The first installation asks for
+confirmation. An update that replaces the shared Control Bridge also asks
+before restarting SimHub; later controller-only updates are applied
+automatically where the controller software supports it. DashDeck ignores
+packages for controller applications that are not installed.
+
+After installation, open the controller application's action list or
+marketplace and add the DashDeck actions to the required buttons or supported
+knobs. The integration provides actions to:
+
+- enable or disable any of the four screens;
+- open a screen's capture-area editor;
+- select an exact capture area;
+- move to the previous or next area, or cycle areas with a supported knob;
+- switch a compatible rectangular VoCore between Capture and Web;
+- show or hide the virtual touchpad; and
+- enable or disable the touchpad.
+
+Button titles, icons, selected screens, available capture areas, and live state
+are supplied by DashDeck. A toggle becomes active only when its real plugin
+state matches that button: for example, an exact-area button is active only
+while that same Screen and area are selected. Screen and area changes made in
+the plugin, SimHub, or a controller are synchronized automatically.
+
+The **Connection** section shows the live connection and installed version for
+the bridge and each supported controller plugin. If an integration is
+installed but not connected, confirm that its controller application is
+running, then use **Check now** to verify that all installed components are up
+to date.
+
 ## Troubleshooting
 
 - Update SimHub before diagnosing capture or device problems.
@@ -176,6 +215,9 @@ controllers supported by SimHub.
   and restarts SimHub automatically after a successful installation.
 - For phone or tablet output, allow SimHub through the Windows firewall when
   prompted and keep both devices on the same network.
+- If a controller integration is not connected, make sure its controller
+  software is running and check its status and version on the **Controllers**
+  tab. Only install integrations for controller software present on the PC.
 - Enable debug logging on the **Advanced** tab only while diagnosing a problem.
   Logs can be opened directly from that tab.
 
