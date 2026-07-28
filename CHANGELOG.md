@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.6.0 - 2026-07-28
+
+- Made CAS On/Off configurable independently for every logical capture area,
+  shared across all cars and editable without loading a car.
+- Reorganized the Screens tab into clearly separated settings groups labelled
+  ALL CARS, CURRENT CAR, THIS DEVICE, or WAITING FOR CAR, so every option's
+  scope is visible where it is edited.
+- Kept the selected capture area stable when changing CAS or switching between
+  Capture and Web, preventing the area selector from becoming empty.
+- Improved the Invisible dash layout with boxed Placement and Image processing
+  sections while keeping its already-global scope free of redundant labels.
+- Prevented stale custom idle-theme frames from flashing over a live VoCore
+  after upgrades, state changes, or output-session replacement.
+- Debounced transient SimHub presentation-state samples and made ownership
+  deterministic when legacy settings assign multiple Screens to one VoCore.
+- Updated the public and built-in guides with the new screen-setting scopes,
+  per-area CAS workflow, and current UI group names.
+
 ## 1.5.0 - 2026-07-27
 
 - Added ready-made controller integrations for Elgato Stream Deck and Stream

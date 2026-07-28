@@ -21,11 +21,30 @@ Use Screen 1, Screen 2, or Screen 3 for an in-game mirror, dashboard, camera
 view, or instrument. The capture area and source monitor are stored per car,
 because the position of an in-game display can change between cars.
 
-Each Screen can have one, two, or three capture areas. The number of areas is
-global for that Screen, while each area's coordinates, tilt, and source monitor
-are saved for the current car. Use the Next and Previous capture area controls
-to switch between them while driving; the selection wraps from the last area
-back to the first and in the opposite direction.
+Each Screen can have one, two, or three capture areas. The number of areas and
+each logical area's CAS On/Off state are global for that Screen, while the
+coordinates, tilt, and source monitor are saved for the current car. Use the
+Next and Previous capture area controls to switch between them while driving;
+the selection wraps from the last area back to the first and in the opposite
+direction. The selected area's CAS state is applied immediately when the area
+changes.
+
+The Screens tab labels every settings group with its scope:
+
+- **ALL CARS** means the setting is shared by every car. This includes what the
+  Screen shows, area count and each area's CAS state, output and idle behaviour,
+  and image processing.
+- **CURRENT CAR** means the setting belongs to the loaded car. This applies to
+  the selected area's source monitor, coordinates, and tilt. Without a loaded
+  car, Area position shows **WAITING FOR CAR**: the monitor selection becomes
+  the default for new car profiles, while coordinates and tilt remain
+  read-only.
+- **THIS DEVICE** means the setting belongs to the selected output device. The
+  dashboard restored when a Screen is switched off is stored for that VoCore,
+  not for a car or capture area.
+
+The Invisible dash is already fully global, including its physical Placement,
+so its sections do not repeat an **ALL CARS** label.
 
 For Le Mans Ultimate and rFactor 2, DashDeck resolves the real vehicle model so
 different teams and liveries of the same model can share one capture profile.
@@ -44,9 +63,16 @@ its cached vehicle list instead of permanently falling back to a team name.
    selection.
 7. Select the output device and choose the scaling mode.
 
-The number of areas can be changed without a car loaded. Area coordinates
-remain visible in the UI, but per-car geometry can only be edited after SimHub
-has identified the current car. Removing an area asks for confirmation.
+The settings are grouped as **What this screen shows**, **Capture areas**,
+**Area position**, **Output & idle behaviour**, **Placement**, **Image
+processing**, and **Dashboard when this screen is off**. The scope label beside
+each heading shows whether a change affects every car, only the loaded car, or
+the selected device.
+
+The number of areas and each area's CAS On/Off state can be configured without
+a car loaded. Area coordinates remain visible in the UI, but per-car geometry
+can only be edited after SimHub has identified the current car. Removing an
+area asks for confirmation.
 
 The area editor toolbar can be dragged to a convenient position and
 automatically moves away when it would cover the area being edited.
@@ -102,8 +128,12 @@ Remote display access is view-only and uses a generated access token.
 
 The optional CAS overlay adds rear proximity information over a mirror capture.
 It can show a rear chevron, side alerts, distance, time gap, session
-information, and driver names. Enable it per mirror screen and configure its
-shared appearance on the **CAS Overlay** tab.
+information, and driver names. Select a Screen's capture area and enable CAS
+separately for that logical area. The choice is global for every car and can be
+configured without a car loaded. This lets one area be a mirror with CAS while
+another area on the same Screen remains a clean dashboard or camera view.
+Configure the shared colours, sizes, and visible details on the **CAS Overlay**
+tab. CAS is not available on the Invisible dash or a web source.
 
 The rear chevrons, distance label, driver names, session/lap text, scale text,
 and spotter alerts can be resized independently. The spotter can use filled
