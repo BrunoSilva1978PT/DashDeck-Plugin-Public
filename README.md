@@ -53,7 +53,8 @@ A VoCore display is optional.
   tilted-display support, a draggable toolbar that moves away from the area
   being edited, and an integrated Screen/area selector.
 - Per-car capture areas, including model-aware profiles for Le Mans Ultimate
-  and rFactor 2 with vehicle-list caching and retry handling.
+  and rFactor 2 with stable-identity filtering, cache revalidation and retry
+  handling that retains the last valid live profile.
 - Automatic rectangular and round VoCore handling.
 - Fit, crop-fill, and stretch scaling with configurable image quality and frame
   limits.

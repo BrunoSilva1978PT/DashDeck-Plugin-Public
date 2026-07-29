@@ -32,7 +32,7 @@ changes.
 The Screens tab labels every settings group with its scope:
 
 - **ALL CARS** means the setting is shared by every car. This includes what the
-  Screen shows, area count and each area's CAS state, output and idle behaviour,
+  Screen shows, area slots and each area's CAS state, output and idle behaviour,
   and image processing.
 - **CURRENT CAR** means the setting belongs to the loaded car. This applies to
   the selected area's source monitor, coordinates, and tilt. Without a loaded
@@ -43,13 +43,25 @@ The Screens tab labels every settings group with its scope:
   dashboard restored when a Screen is switched off is stored for that VoCore,
   not for a car or capture area.
 
+The area selector always refers to the same global logical slot. For example,
+**Area 2** can have CAS enabled for every car while each car keeps a different
+source monitor, rectangle and tilt for Area 2. The Area position heading, source
+monitor label and coordinates label show the selected area explicitly so it is
+clear which per-car geometry is being edited.
+
 The Invisible dash is already fully global, including its physical Placement,
 so its sections do not repeat an **ALL CARS** label.
 
 For Le Mans Ultimate and rFactor 2, DashDeck resolves the real vehicle model so
 different teams and liveries of the same model can share one capture profile.
-The resolver retries when the game's vehicle API is not ready yet and can reuse
-its cached vehicle list instead of permanently falling back to a team name.
+The team or livery identifier is only lookup evidence and never becomes the
+profile name. DashDeck ignores short empty or changing telemetry samples, keeps
+the last valid profile while the game API is unavailable, and revalidates saved
+identifier mappings after startup so a game update cannot silently select an
+old profile. A car profile is also locked throughout uninterrupted live
+driving. DashDeck only considers a different car after Pause, Waiting for data,
+menu or another session transition, then requires the new identity to remain
+stable before resolving it.
 
 ## Creating a Capture
 
@@ -63,7 +75,7 @@ its cached vehicle list instead of permanently falling back to a team name.
    selection.
 7. Select the output device and choose the scaling mode.
 
-The settings are grouped as **What this screen shows**, **Capture areas**,
+The settings are grouped as **What this screen shows**, **Area slots & CAS**,
 **Area position**, **Output & idle behaviour**, **Placement**, **Image
 processing**, and **Dashboard when this screen is off**. The scope label beside
 each heading shows whether a change affects every car, only the loaded car, or
@@ -249,6 +261,9 @@ to date.
   software is running and check its status and version on the **Controllers**
   tab. Only install integrations for controller software present on the PC.
 - Enable debug logging on the **Advanced** tab only while diagnosing a problem.
-  Logs can be opened directly from that tab.
+  Logs can be opened directly from that tab. DashDeck always keeps identity and
+  profile transitions in a compact `identity-audit.log`; it survives restarts,
+  rotates at 1 MB and keeps only one `identity-audit.old.log` backup. The normal
+  `plugin.log` still starts clean with every SimHub session.
 
 For detailed explanations of every option, open the built-in **Guide** tab.

@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.6.1 - 2026-07-29
+
+- Locked the active car profile throughout uninterrupted live driving, ignoring
+  empty or unexpected SimHub identity samples until Pause, Waiting for data,
+  menu, replay, or spectating opens a valid car-change window.
+- Required a different post-transition identity to remain stable before it can
+  change profile, while retaining the last valid same-game profile during LMU
+  or rFactor 2 API outages and resolution retries.
+- Revalidated persisted LMU/rFactor 2 model mappings against the running game
+  so a stale cache from a game update cannot silently select another profile.
+- Added an always-on, size-limited identity audit that survives a SimHub restart
+  and records identity decisions, resolver sources, profile changes, selected
+  areas, and the complete mirror geometry applied by each profile.
+- Clarified the Screens UI and Guide by identifying the selected logical area
+  beside its per-car source monitor, position, and coordinates.
+- Moved the CAS session and lap headings outward to keep long driver names clear
+  of the Practice/Race and LAP labels.
+
 ## 1.6.0 - 2026-07-28
 
 - Made CAS On/Off configurable independently for every logical capture area,
